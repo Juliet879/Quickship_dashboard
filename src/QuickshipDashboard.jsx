@@ -45,8 +45,9 @@ const QuickShipDashboard = () => {
         
         // Randomly select a SKU to test success or force a scenario (e.g., timeout)
         const skuToTest = Math.random() < 0.2 ? 'PRODUCT-TIMEOUT-401' : 'PRODUCT-SUCCESS-123';
-        const apiUrl = `http://localhost:8080/cart/summary/${skuToTest}`;
+        const API_BASE_URL = 'https://go-quickship.onrender.com'; 
 
+        const apiUrl = `${API_BASE_URL}/cart/summary/${skuToTest}`;
         let summary = {};
         let latency = 0;
 
